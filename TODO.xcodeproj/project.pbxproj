@@ -15,6 +15,8 @@
 		0A2C91AE1FDB73A700E10B0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A2C91AC1FDB73A700E10B0B /* LaunchScreen.storyboard */; };
 		0AD7B4FF1FDE1E1100C21B6C /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7B4FE1FDE1E1100C21B6C /* ThirdViewController.swift */; };
 		0AD7B5031FDE4EA600C21B6C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7B5021FDE4EA600C21B6C /* ImageViewController.swift */; };
+		3415D84221F3D5B700C55F48 /* SubTodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415D84121F3D5B700C55F48 /* SubTodosViewController.swift */; };
+		3415D84421F3D9A500C55F48 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415D84321F3D9A500C55F48 /* TodoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		0A2C91AF1FDB73A700E10B0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AD7B4FE1FDE1E1100C21B6C /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		0AD7B5021FDE4EA600C21B6C /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		3415D84121F3D5B700C55F48 /* SubTodosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTodosViewController.swift; sourceTree = "<group>"; };
+		3415D84321F3D9A500C55F48 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				0A2C91AA1FDB73A700E10B0B /* Assets.xcassets */,
 				0A2C91AC1FDB73A700E10B0B /* LaunchScreen.storyboard */,
 				0A2C91AF1FDB73A700E10B0B /* Info.plist */,
+				3415D84121F3D5B700C55F48 /* SubTodosViewController.swift */,
+				3415D84321F3D9A500C55F48 /* TodoItem.swift */,
 			);
 			path = TODO;
 			sourceTree = "<group>";
@@ -146,9 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3415D84421F3D9A500C55F48 /* TodoItem.swift in Sources */,
 				0A2C91A61FDB73A700E10B0B /* SecondViewController.swift in Sources */,
 				0A2C91A21FDB73A700E10B0B /* AppDelegate.swift in Sources */,
 				0AD7B5031FDE4EA600C21B6C /* ImageViewController.swift in Sources */,
+				3415D84221F3D5B700C55F48 /* SubTodosViewController.swift in Sources */,
 				0AD7B4FF1FDE1E1100C21B6C /* ThirdViewController.swift in Sources */,
 				0A2C91A41FDB73A700E10B0B /* FirstViewController.swift in Sources */,
 			);

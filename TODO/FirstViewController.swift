@@ -9,6 +9,7 @@
 import UIKit
 
 var list = [String]()
+var myIndex = 0
 
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -70,6 +71,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return(cell)
     }
     
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+        myIndex = indexPath.row
+        performSegue(withIdentifier: "firstViewSegue", sender: self)
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
         
@@ -100,6 +107,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
 
 
 }

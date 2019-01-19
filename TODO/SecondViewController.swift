@@ -34,7 +34,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             
             // generate random number
             let n = arc4random_uniform(UInt32(list.count))
-            list_2.append(list[Int(n)])
+            list_2.append(list[Int(n)].getTitle())
             list.remove(at: Int(n))
             
             present(alert_deciding, animated: true, completion: nil)

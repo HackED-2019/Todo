@@ -8,7 +8,7 @@
 
 import UIKit
 
-var list = [String]()
+var list = [TodoItem]()
 var myIndex = 0
 
 
@@ -31,7 +31,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             if (textField.text != "")
             {
-                list.append(textField.text!)
+                let todo = TodoItem(title: textField.text ?? "no title", date: "2019-01-01", subTodos: ["1", "2"])
+                list.append(todo)
                 textField.text = ""
                 self.view.endEditing(true)
             }
@@ -66,13 +67,12 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = list[indexPath.row]
+        cell.textLabel?.text = list[indexPath.row].getTitle()
         
         return(cell)
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
         myIndex = indexPath.row
         performSegue(withIdentifier: "firstViewSegue", sender: self)
     }

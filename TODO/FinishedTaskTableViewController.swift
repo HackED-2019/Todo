@@ -28,8 +28,6 @@ class FinishedTaskTableViewController: UIViewController, UITableViewDelegate, UI
             fatalError("The dequeued cell is not an instance of TaskTableViewCell.")
         }
         
-        finishedTasks = []
-        
         for task in tasks {
             if task.isDone == true {
                 finishedTasks.append(task)
@@ -49,6 +47,7 @@ class FinishedTaskTableViewController: UIViewController, UITableViewDelegate, UI
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
+        myIndex = 0
         myIndex = indexPath.row
         performSegue(withIdentifier: "firstViewSegue", sender: self)
     }

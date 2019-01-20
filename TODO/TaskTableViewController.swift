@@ -11,7 +11,6 @@ import UIKit
 var tasks = [TodoItem]()
 var myIndex = 0
 
-
 class TaskTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var taskTableView: UITableView!

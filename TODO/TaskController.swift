@@ -10,8 +10,6 @@ import UIKit
 
 class TaskController: UITableViewController{
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = tasks[myIndex].getTitle()

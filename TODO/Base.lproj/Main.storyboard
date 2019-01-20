@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--Task Table View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="TODO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="TaskTableViewController" customModule="TODO" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -90,10 +90,10 @@
             </objects>
             <point key="canvasLocation" x="1548" y="-331.48425787106447"/>
         </scene>
-        <!--Sub Todos View Controller-->
+        <!--Task Controller-->
         <scene sceneID="D8T-7N-wae">
             <objects>
-                <tableViewController id="qzZ-BT-RqR" customClass="SubTodosViewController" customModule="TODO" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="qzZ-BT-RqR" customClass="TaskController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="geh-Z9-Jm3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,7 +121,7 @@
         <!--Picker-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="TODO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="RandomTaskController" customModule="TODO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -164,10 +164,10 @@
             </objects>
             <point key="canvasLocation" x="748" y="360.2698650674663"/>
         </scene>
-        <!--Third View Controller-->
+        <!--Finished Task Table View Controller-->
         <scene sceneID="Kvc-sy-PWe">
             <objects>
-                <viewController id="Ex6-up-yVq" customClass="ThirdViewController" customModule="TODO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ex6-up-yVq" customClass="FinishedTaskTableViewController" customModule="TODO" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="29B-QP-AmW"/>
                         <viewControllerLayoutGuide type="bottom" id="nSH-dI-bUy"/>

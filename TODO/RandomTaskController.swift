@@ -8,8 +8,9 @@
 
 import UIKit
 
+var randomTasks = [TodoItem]()
 
-class SecondViewController: UIViewController, UITextFieldDelegate {
+class RandomTaskController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func myButton(_ sender: Any) {
@@ -34,7 +35,7 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             
             // generate random number
             let n = arc4random_uniform(UInt32(tasks.count))
-            list_2.append(tasks[Int(n)].getTitle())
+            randomTasks.append(tasks[Int(n)])
             tasks.remove(at: Int(n))
             
             present(alert_deciding, animated: true, completion: nil)

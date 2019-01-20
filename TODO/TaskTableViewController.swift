@@ -12,7 +12,7 @@ var tasks = [TodoItem]()
 var myIndex = 0
 
 
-class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TaskTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var myTableView: UITableView!
 
@@ -47,7 +47,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             textField.autocorrectionType = .default
             textField.clearButtonMode = .whileEditing
         }
-        
         
         // Add action buttons and present the Alert
         alert.addAction(cancel)

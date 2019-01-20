@@ -12,8 +12,10 @@ class TodoItem {
     var title: String
     var date: String
     var subTodos: [String] = []
-    var finishedTodos: [String] = []
+    var finishedSubTodos: [String] = []
     var progress: Float = 0
+    var isDone: Bool = false
+    var weight: Float = 0
     
     init(title: String, date: String) {
         self.title = title
@@ -28,16 +30,26 @@ class TodoItem {
         return date
     }
     
+    func getWeight() -> Float {
+        return weight
+    }
+    
+    
+    
     func getSubTodos() -> [String] {
         return subTodos
     }
     
     func getProgress() -> Float {
-        return Float(finishedTodos.count/subTodos.count)
+        return Float(finishedSubTodos.count/subTodos.count)
     }
     
     func getFinishedTodos() -> [String] {
-        return finishedTodos
+        return finishedSubTodos
+    }
+    
+    func getStatus() -> Bool {
+        return isDone
     }
     
 }

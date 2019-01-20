@@ -11,11 +11,33 @@ import Foundation
 class TodoItem {
     var title: String
     var date: String
-    var subTodos: [String]
+    var subTodos: [String] = []
+    var finishedTodos: [String] = []
+    var progress: Float = 0
     
-    init(title: String, date: String, subTodos: [String]) {
+    init(title: String, date: String) {
         self.title = title
         self.date = date
-        self.subTodos = subTodos
     }
+    
+    func getTitle() -> String {
+        return title
+    }
+    
+    func getDate() -> String {
+        return date
+    }
+    
+    func getSubTodos() -> [String] {
+        return subTodos
+    }
+    
+    func getProgress() -> Float {
+        return Float(finishedTodos.count/subTodos.count)
+    }
+    
+    func getFinishedTodos() -> [String] {
+        return finishedTodos
+    }
+    
 }

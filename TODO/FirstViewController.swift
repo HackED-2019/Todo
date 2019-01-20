@@ -8,7 +8,7 @@
 
 import UIKit
 
-var list = [String]()
+var tasks = [TodoItem]()
 var myIndex = 0
 
 
@@ -31,7 +31,8 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
             
             if (textField.text != "")
             {
-                list.append(textField.text!)
+                let todo = TodoItem(title: textField.text ?? "no title", date: "2019-01-01")
+                tasks.append(todo)
                 textField.text = ""
                 self.view.endEditing(true)
             }
@@ -55,20 +56,29 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
     }
     
-    
-    
-    
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return (list.count)
+        return (tasks.count)
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
-        cell.textLabel?.text = list[indexPath.row]
+        // Table view cells are reused and should be dequeued using a cell identifier.
+        let cellIdentifier = "TaskTableViewCell"
         
-        return(cell)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? TaskTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of TaskTableViewCell.")
+        }
+        
+        // Fetches the appropriate meal for the data source layout.
+        let task = tasks[indexPath.row]
+        
+        cell.taskNameLabel.text = task.title
+        cell.deadlineLabel.text = task.date
+        cell.progressBar.progress = task.progress
+        
+        return cell
+    
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -83,7 +93,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 //        delete item
         if editingStyle == UITableViewCellEditingStyle.delete
         {
-            list.remove(at: indexPath.row)
+            tasks.remove(at: indexPath.row)
             myTableView.reloadData()
         }
 

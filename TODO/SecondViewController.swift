@@ -14,14 +14,14 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func myButton(_ sender: Any) {
         
-        if list.count == 0 {
+        if tasks.count == 0 {
             
             let alert = UIAlertController(title: "Your plans are empty", message: "Let's add more plans", preferredStyle: .alert)
             
             //OK button
             let okAction = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in})
             
-           
+            
             alert.addAction(okAction)
             present(alert, animated: true, completion: nil)
             
@@ -33,9 +33,9 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             
             
             // generate random number
-            let n = arc4random_uniform(UInt32(list.count))
-            list_2.append(list[Int(n)])
-            list.remove(at: Int(n))
+            let n = arc4random_uniform(UInt32(tasks.count))
+            list_2.append(tasks[Int(n)].getTitle())
+            tasks.remove(at: Int(n))
             
             present(alert_deciding, animated: true, completion: nil)
             var when = DispatchTime.now() + 2
@@ -53,18 +53,18 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
             
         }
     }
-
-
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 

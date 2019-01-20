@@ -13,9 +13,9 @@ var myIndex = 0
 
 
 class TaskTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    @IBOutlet weak var myTableView: UITableView!
 
+    @IBOutlet weak var taskTableView: UITableView!
+    
     @IBAction func add(_ sender: Any) {
 
         let alert = UIAlertController(title: "What is your plan today?", message: nil, preferredStyle: .alert)
@@ -36,7 +36,7 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
                 textField.text = ""
                 self.view.endEditing(true)
             }
-            self.myTableView.reloadData()
+            self.taskTableView.reloadData()
             print(textField.text!)
         })
         
@@ -93,7 +93,7 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
         if editingStyle == UITableViewCellEditingStyle.delete
         {
             tasks.remove(at: indexPath.row)
-            myTableView.reloadData()
+            taskTableView.reloadData()
         }
 
     }
@@ -101,7 +101,7 @@ class TaskTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
     
     override func viewDidAppear(_ animated: Bool) {
-        myTableView.reloadData()
+        taskTableView.reloadData()
     }
     
     

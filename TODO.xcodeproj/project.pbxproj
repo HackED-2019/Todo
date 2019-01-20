@@ -17,6 +17,7 @@
 		0AD7B5031FDE4EA600C21B6C /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD7B5021FDE4EA600C21B6C /* ImageViewController.swift */; };
 		3415D84221F3D5B700C55F48 /* SubTodosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415D84121F3D5B700C55F48 /* SubTodosViewController.swift */; };
 		3415D84421F3D9A500C55F48 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3415D84321F3D9A500C55F48 /* TodoItem.swift */; };
+		B20B7C0C21F3E4B400D67638 /* RandomTaskDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20B7C0B21F3E4B400D67638 /* RandomTaskDisplayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		0AD7B5021FDE4EA600C21B6C /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		3415D84121F3D5B700C55F48 /* SubTodosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubTodosViewController.swift; sourceTree = "<group>"; };
 		3415D84321F3D9A500C55F48 /* TodoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
+		B20B7C0B21F3E4B400D67638 /* RandomTaskDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomTaskDisplayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		0A2C91A01FDB73A700E10B0B /* TODO */ = {
 			isa = PBXGroup;
 			children = (
+				B20B7C0B21F3E4B400D67638 /* RandomTaskDisplayViewController.swift */,
 				0A2C91A11FDB73A700E10B0B /* AppDelegate.swift */,
 				0A2C91A31FDB73A700E10B0B /* FirstViewController.swift */,
 				0A2C91A51FDB73A700E10B0B /* SecondViewController.swift */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3415D84421F3D9A500C55F48 /* TodoItem.swift in Sources */,
+				B20B7C0C21F3E4B400D67638 /* RandomTaskDisplayViewController.swift in Sources */,
 				0A2C91A61FDB73A700E10B0B /* SecondViewController.swift in Sources */,
 				0A2C91A21FDB73A700E10B0B /* AppDelegate.swift in Sources */,
 				0AD7B5031FDE4EA600C21B6C /* ImageViewController.swift in Sources */,

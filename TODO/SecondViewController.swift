@@ -51,6 +51,10 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
                 }
             }
             
+            //New Code --Punam--
+            //Atempt to display result after random picker selected
+            performSegue(withIdentifier: "goRandTask", sender:self);
+            
         }
     }
 
